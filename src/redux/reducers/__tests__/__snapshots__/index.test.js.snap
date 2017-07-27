@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getCartContent 1`] = `
+Object {
+  "cartItems": Array [
+    Object {
+      "price": 0.3,
+      "productId": "84f02126-160d-4950-99a6-0335b9c49b1b",
+      "productName": "Orange",
+      "promotionName": undefined,
+      "quantity": 1,
+      "unitPrice": 0.3,
+    },
+    Object {
+      "price": 1.5,
+      "productId": "a9dd5019-194f-4cd0-a661-5e9485676879",
+      "productName": "Papaya",
+      "promotionName": "3 x 2",
+      "quantity": 4,
+      "unitPrice": 0.5,
+    },
+  ],
+  "totalPrice": 1.8,
+}
+`;
+
+exports[`getProductList 1`] = `
+Array [
+  Object {
+    "id": "42d1595f-63d6-4c68-967a-e1ec4d7ca37c",
+    "name": "Apple",
+    "price": 0.25,
+    "promotionName": undefined,
+  },
+  Object {
+    "id": "84f02126-160d-4950-99a6-0335b9c49b1b",
+    "name": "Orange",
+    "price": 0.3,
+    "promotionName": undefined,
+  },
+  Object {
+    "id": "303b0e06-ad7a-49e5-8a30-63fb12027990",
+    "name": "Banana",
+    "price": 0.15,
+    "promotionName": undefined,
+  },
+  Object {
+    "id": "a9dd5019-194f-4cd0-a661-5e9485676879",
+    "name": "Papaya",
+    "price": 0.5,
+    "promotionName": "3 x 2",
+  },
+]
+`;
+
+exports[`getPromotionList 1`] = `
+Array [
+  Object {
+    "discountRate": 0.1,
+    "id": "1d7bae3b-593c-4335-8b59-1a9b6031b47b",
+    "name": "10% discount",
+    "type": "PERCENTAGE",
+  },
+  Object {
+    "forQuantity": 3,
+    "id": "85d80dfa-46b9-4e87-8a76-2ad2cfcca040",
+    "name": "3 x 2",
+    "pay": 2,
+    "type": "QUANTITY",
+  },
+]
+`;

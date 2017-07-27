@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addCartItem 1`] = `
+Object {
+  "payload": Object {
+    "productId": "42d1595f-63d6-4c68-967a-e1ec4d7ca37c",
+  },
+  "type": "ADD_CART_ITEM",
+}
+`;
+
+exports[`addProduct 1`] = `
+Object {
+  "payload": Object {
+    "id": "42d1595f-63d6-4c68-967a-e1ec4d7ca37c",
+    "name": "Apple",
+    "price": 0.25,
+  },
+  "type": "ADD_PRODUCT",
+}
+`;
+
+exports[`addPromotion 1`] = `
+Object {
+  "payload": Object {
+    "discountRate": 0.1,
+    "id": "1d7bae3b-593c-4335-8b59-1a9b6031b47b",
+    "name": "10% discount",
+    "type": "PERCENTAGE",
+  },
+  "type": "ADD_PROMOTION",
+}
+`;
+
+exports[`decrementCartItemQuantity 1`] = `
+Object {
+  "payload": Object {
+    "productId": "42d1595f-63d6-4c68-967a-e1ec4d7ca37c",
+  },
+  "type": "DECREMENT_CART_ITEM_QUANTITY",
+}
+`;
+
+exports[`incrementCartItemQuantity 1`] = `
+Object {
+  "payload": Object {
+    "productId": "42d1595f-63d6-4c68-967a-e1ec4d7ca37c",
+  },
+  "type": "INCREMENT_CART_ITEM_QUANTITY",
+}
+`;
+
+exports[`setDataAsCompleted 1`] = `
+Object {
+  "payload": undefined,
+  "type": "DATA_LOADER_COMPLETE",
+}
+`;
+
+exports[`setDataAsError 1`] = `
+Object {
+  "payload": "some error message",
+  "type": "DATA_LOADER_ERROR",
+}
+`;
+
+exports[`setDataAsLoading 1`] = `
+Object {
+  "payload": undefined,
+  "type": "DATA_LOADER_LOADING",
+}
+`;

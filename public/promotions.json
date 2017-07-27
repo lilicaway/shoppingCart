@@ -1,0 +1,15 @@
+[
+    {
+        "id": "1d7bae3b-593c-4335-8b59-1a9b6031b47b",
+        "name": "10% discount",
+        "type": "PERCENTAGE",
+        "discountRate": 0.1
+    },
+    {
+        "id": "85d80dfa-46b9-4e87-8a76-2ad2cfcca040",
+        "name": "3 x 2",
+        "type": "QUANTITY",
+        "forQuantity": 3,
+        "pay": 2
+    }
+]

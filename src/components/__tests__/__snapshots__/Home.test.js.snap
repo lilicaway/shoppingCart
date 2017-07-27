@@ -1,0 +1,1429 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
+    <Panel
+        bsClass="panel"
+        bsStyle="default"
+        defaultExpanded={false}
+        header="Initial Data"
+    >
+        <p>
+            tl/dr: You can load the initial data and start playing with the app.
+        </p>
+        <Grid
+            bsClass="container"
+            componentClass="div"
+            fluid={true}
+        >
+            <Col
+                bsClass="col"
+                componentClass="div"
+                md={2}
+            >
+                <Button
+                    active={false}
+                    block={false}
+                    bsClass="btn"
+                    bsStyle="primary"
+                    disabled={false}
+                    onClick={undefined}
+                >
+                    Load initial data
+                </Button>
+            </Col>
+            <Col
+                bsClass="col"
+                componentClass="div"
+                md={10}
+            >
+                <LoadingState
+                    errorMessage=""
+                    isCompleted={false}
+                    loading={false}
+                />
+            </Col>
+        </Grid>
+    </Panel>
+    <Panel
+        bsClass="panel"
+        bsStyle="default"
+        defaultExpanded={false}
+        header="Features and limitations"
+    >
+        <h2>
+            Features
+        </h2>
+        <p>
+            The app has 2 modules. An 
+            <Link
+                replace={false}
+                to="/admin"
+            >
+                Admin
+            </Link>
+             module, where you can see and manage the list of
+             
+            <Link
+                replace={false}
+                to="/admin/promotions"
+            >
+                Promotions
+            </Link>
+             and the list of 
+            <Link
+                replace={false}
+                to="/admin/products"
+            >
+                Products
+            </Link>
+            , and a 
+            <Link
+                replace={false}
+                to="/cart"
+            >
+                Cart
+            </Link>
+             module, where you can add and remove the available Products from the shopping cart.
+        </p>
+        <p>
+            In the 
+            <Link
+                replace={false}
+                to="/admin/promotions"
+            >
+                Promotions
+            </Link>
+             manager you can add promotions from two different types. The 
+            <Link
+                replace={false}
+                to="/admin/promotions/add/percentage"
+            >
+                Percentage Promotion
+            </Link>
+             section lets you configure a Promotion with a name and a discount percentage. The
+             
+            <Link
+                replace={false}
+                to="/admin/promotions/add/quantity"
+            >
+                Quantity Promotion
+            </Link>
+             section lets you add Promotions of the kind "take 2, but pay 1", where how many you take and how many you pay is configurable.
+        </p>
+        <p>
+            In the 
+            <Link
+                replace={false}
+                to="/admin/products"
+            >
+                Products
+            </Link>
+             manager you can add Products with an name, a unit price and, optionally, one of the available Promotions.
+        </p>
+        <p>
+            In the 
+            <Link
+                replace={false}
+                to="/cart"
+            >
+                Cart
+            </Link>
+             module you can select produts from the available ones. They will be added to the cart and their promotions, if any, will be applied automatically. The cart will show all products added, their unit price, the quantity, the name of the promotion (if the product has one) and the total price per item. At the bottom it will show the total price for the cart.
+        </p>
+        <p>
+            When the page is loaded for the first time, there are no 
+            <Link
+                replace={false}
+                to="/admin/promotions"
+            >
+                Promotions
+            </Link>
+             nor
+             
+            <Link
+                replace={false}
+                to="/admin/products"
+            >
+                Products
+            </Link>
+             available. So it is not possible to use the
+             
+            <Link
+                replace={false}
+                to="/cart"
+            >
+                Cart
+            </Link>
+            . You can go to the 
+            <Link
+                replace={false}
+                to="/admin"
+            >
+                Admin
+            </Link>
+             module and add them manually, or you can click on the "Load initial data" button at the top of this page. That button will asynchronously add a list of Promotions and Products.
+        </p>
+        <h2>
+            Limitations
+        </h2>
+        Since this is mostly a demo app, there are many limitations.
+        <ul>
+            <li>
+                <strong>
+                    Numbers:
+                </strong>
+                 all numeric operations are done with standard Javascript numbers, which are floating point and error prone. A library to format the results with 2 digits is being used, but it could be that, depending on the numbers, there could be small inconsistencies.
+            </li>
+            <li>
+                <strong>
+                    Remove/Edit Products and Promotions:
+                </strong>
+                 it is not possible to edit nor remove neither Products nor Promotions. However, items from the Cart can be removed by using the decrement button until it reaches zero.
+            </li>
+            <li>
+                <strong>
+                    Persistency:
+                </strong>
+                 there is no data persistency at all. If you close or reload the page, all data is lost. The asynchronous loading of data shows an example of using asynchronouse actions in redux.
+            </li>
+            <li>
+                <strong>
+                    Validations:
+                </strong>
+                 there are some validations on the forms used to add Promotions and Products, but they are not full proof (you could add negative numbers, for example). And there is absolutely no validation of the data entererd in the action creators (so if the data comming from the backend as initial data is corrupted, it will just result in unexpected results). And in most of the places where data is shown, it is assumed to be valid.
+            </li>
+            <li>
+                <strong>
+                    Admin permission:
+                </strong>
+                 the 
+                <Link
+                    replace={false}
+                    to="/admin"
+                >
+                    Admin
+                </Link>
+                 module doesn't have any kind of permission validation whatsoever. It is just there to demo how to add Promotions and Products.
+            </li>
+            <li>
+                <strong>
+                    Styling:
+                </strong>
+                 
+                <a
+                    href="http://getbootstrap.com/css"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    Bootstrap
+                </a>
+                 
+                and
+                 
+                <a
+                    href="https://react-bootstrap.github.io/components.html"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    react-bootstrap
+                </a>
+                 
+                are the only things being used for styling the app. No custom .css file was written, so the application doesn't look perfect everywhere.
+            </li>
+            <li>
+                <strong>
+                    Tests:
+                </strong>
+                 there are examples of different types of tests, but not everything is being tested.
+            </li>
+        </ul>
+    </Panel>
+</div>,
+  "nodes": Array [
+    <div>
+      <Panel
+            bsClass="panel"
+            bsStyle="default"
+            defaultExpanded={false}
+            header="Initial Data"
+      >
+            <p>
+                  tl/dr: You can load the initial data and start playing with the app.
+            </p>
+            <Grid
+                  bsClass="container"
+                  componentClass="div"
+                  fluid={true}
+            >
+                  <Col
+                        bsClass="col"
+                        componentClass="div"
+                        md={2}
+                  >
+                        <Button
+                              active={false}
+                              block={false}
+                              bsClass="btn"
+                              bsStyle="primary"
+                              disabled={false}
+                              onClick={undefined}
+                        >
+                              Load initial data
+                        </Button>
+                  </Col>
+                  <Col
+                        bsClass="col"
+                        componentClass="div"
+                        md={10}
+                  >
+                        <LoadingState
+                              errorMessage=""
+                              isCompleted={false}
+                              loading={false}
+                        />
+                  </Col>
+            </Grid>
+      </Panel>
+      <Panel
+            bsClass="panel"
+            bsStyle="default"
+            defaultExpanded={false}
+            header="Features and limitations"
+      >
+            <h2>
+                  Features
+            </h2>
+            <p>
+                  The app has 2 modules. An 
+                  <Link
+                        replace={false}
+                        to="/admin"
+                  >
+                        Admin
+                  </Link>
+                   module, where you can see and manage the list of
+                   
+                  <Link
+                        replace={false}
+                        to="/admin/promotions"
+                  >
+                        Promotions
+                  </Link>
+                   and the list of 
+                  <Link
+                        replace={false}
+                        to="/admin/products"
+                  >
+                        Products
+                  </Link>
+                  , and a 
+                  <Link
+                        replace={false}
+                        to="/cart"
+                  >
+                        Cart
+                  </Link>
+                   module, where you can add and remove the available Products from the shopping cart.
+            </p>
+            <p>
+                  In the 
+                  <Link
+                        replace={false}
+                        to="/admin/promotions"
+                  >
+                        Promotions
+                  </Link>
+                   manager you can add promotions from two different types. The 
+                  <Link
+                        replace={false}
+                        to="/admin/promotions/add/percentage"
+                  >
+                        Percentage Promotion
+                  </Link>
+                   section lets you configure a Promotion with a name and a discount percentage. The
+                   
+                  <Link
+                        replace={false}
+                        to="/admin/promotions/add/quantity"
+                  >
+                        Quantity Promotion
+                  </Link>
+                   section lets you add Promotions of the kind "take 2, but pay 1", where how many you take and how many you pay is configurable.
+            </p>
+            <p>
+                  In the 
+                  <Link
+                        replace={false}
+                        to="/admin/products"
+                  >
+                        Products
+                  </Link>
+                   manager you can add Products with an name, a unit price and, optionally, one of the available Promotions.
+            </p>
+            <p>
+                  In the 
+                  <Link
+                        replace={false}
+                        to="/cart"
+                  >
+                        Cart
+                  </Link>
+                   module you can select produts from the available ones. They will be added to the cart and their promotions, if any, will be applied automatically. The cart will show all products added, their unit price, the quantity, the name of the promotion (if the product has one) and the total price per item. At the bottom it will show the total price for the cart.
+            </p>
+            <p>
+                  When the page is loaded for the first time, there are no 
+                  <Link
+                        replace={false}
+                        to="/admin/promotions"
+                  >
+                        Promotions
+                  </Link>
+                   nor
+                   
+                  <Link
+                        replace={false}
+                        to="/admin/products"
+                  >
+                        Products
+                  </Link>
+                   available. So it is not possible to use the
+                   
+                  <Link
+                        replace={false}
+                        to="/cart"
+                  >
+                        Cart
+                  </Link>
+                  . You can go to the 
+                  <Link
+                        replace={false}
+                        to="/admin"
+                  >
+                        Admin
+                  </Link>
+                   module and add them manually, or you can click on the "Load initial data" button at the top of this page. That button will asynchronously add a list of Promotions and Products.
+            </p>
+            <h2>
+                  Limitations
+            </h2>
+            Since this is mostly a demo app, there are many limitations.
+            <ul>
+                  <li>
+                        <strong>
+                              Numbers:
+                        </strong>
+                         all numeric operations are done with standard Javascript numbers, which are floating point and error prone. A library to format the results with 2 digits is being used, but it could be that, depending on the numbers, there could be small inconsistencies.
+                  </li>
+                  <li>
+                        <strong>
+                              Remove/Edit Products and Promotions:
+                        </strong>
+                         it is not possible to edit nor remove neither Products nor Promotions. However, items from the Cart can be removed by using the decrement button until it reaches zero.
+                  </li>
+                  <li>
+                        <strong>
+                              Persistency:
+                        </strong>
+                         there is no data persistency at all. If you close or reload the page, all data is lost. The asynchronous loading of data shows an example of using asynchronouse actions in redux.
+                  </li>
+                  <li>
+                        <strong>
+                              Validations:
+                        </strong>
+                         there are some validations on the forms used to add Promotions and Products, but they are not full proof (you could add negative numbers, for example). And there is absolutely no validation of the data entererd in the action creators (so if the data comming from the backend as initial data is corrupted, it will just result in unexpected results). And in most of the places where data is shown, it is assumed to be valid.
+                  </li>
+                  <li>
+                        <strong>
+                              Admin permission:
+                        </strong>
+                         the 
+                        <Link
+                              replace={false}
+                              to="/admin"
+                        >
+                              Admin
+                        </Link>
+                         module doesn't have any kind of permission validation whatsoever. It is just there to demo how to add Promotions and Products.
+                  </li>
+                  <li>
+                        <strong>
+                              Styling:
+                        </strong>
+                         
+                        <a
+                              href="http://getbootstrap.com/css"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                        >
+                              Bootstrap
+                        </a>
+                         
+                        and
+                         
+                        <a
+                              href="https://react-bootstrap.github.io/components.html"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                        >
+                              react-bootstrap
+                        </a>
+                         
+                        are the only things being used for styling the app. No custom .css file was written, so the application doesn't look perfect everywhere.
+                  </li>
+                  <li>
+                        <strong>
+                              Tests:
+                        </strong>
+                         there are examples of different types of tests, but not everything is being tested.
+                  </li>
+            </ul>
+      </Panel>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Home
+        errorMessage=""
+        isCompleted={false}
+        loading={false}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Home {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "errorMessage": "",
+          "isCompleted": false,
+          "loading": false,
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div>
+          <Panel
+                    bsClass="panel"
+                    bsStyle="default"
+                    defaultExpanded={false}
+                    header="Initial Data"
+          >
+                    <p>
+                              tl/dr: You can load the initial data and start playing with the app.
+                    </p>
+                    <Grid
+                              bsClass="container"
+                              componentClass="div"
+                              fluid={true}
+                    >
+                              <Col
+                                        bsClass="col"
+                                        componentClass="div"
+                                        md={2}
+                              >
+                                        <Button
+                                                  active={false}
+                                                  block={false}
+                                                  bsClass="btn"
+                                                  bsStyle="primary"
+                                                  disabled={false}
+                                                  onClick={undefined}
+                                        >
+                                                  Load initial data
+                                        </Button>
+                              </Col>
+                              <Col
+                                        bsClass="col"
+                                        componentClass="div"
+                                        md={10}
+                              >
+                                        <LoadingState
+                                                  errorMessage=""
+                                                  isCompleted={false}
+                                                  loading={false}
+                                        />
+                              </Col>
+                    </Grid>
+          </Panel>
+          <Panel
+                    bsClass="panel"
+                    bsStyle="default"
+                    defaultExpanded={false}
+                    header="Features and limitations"
+          >
+                    <h2>
+                              Features
+                    </h2>
+                    <p>
+                              The app has 2 modules. An 
+                              <Link
+                                        replace={false}
+                                        to="/admin"
+                              >
+                                        Admin
+                              </Link>
+                               module, where you can see and manage the list of
+                               
+                              <Link
+                                        replace={false}
+                                        to="/admin/promotions"
+                              >
+                                        Promotions
+                              </Link>
+                               and the list of 
+                              <Link
+                                        replace={false}
+                                        to="/admin/products"
+                              >
+                                        Products
+                              </Link>
+                              , and a 
+                              <Link
+                                        replace={false}
+                                        to="/cart"
+                              >
+                                        Cart
+                              </Link>
+                               module, where you can add and remove the available Products from the shopping cart.
+                    </p>
+                    <p>
+                              In the 
+                              <Link
+                                        replace={false}
+                                        to="/admin/promotions"
+                              >
+                                        Promotions
+                              </Link>
+                               manager you can add promotions from two different types. The 
+                              <Link
+                                        replace={false}
+                                        to="/admin/promotions/add/percentage"
+                              >
+                                        Percentage Promotion
+                              </Link>
+                               section lets you configure a Promotion with a name and a discount percentage. The
+                               
+                              <Link
+                                        replace={false}
+                                        to="/admin/promotions/add/quantity"
+                              >
+                                        Quantity Promotion
+                              </Link>
+                               section lets you add Promotions of the kind "take 2, but pay 1", where how many you take and how many you pay is configurable.
+                    </p>
+                    <p>
+                              In the 
+                              <Link
+                                        replace={false}
+                                        to="/admin/products"
+                              >
+                                        Products
+                              </Link>
+                               manager you can add Products with an name, a unit price and, optionally, one of the available Promotions.
+                    </p>
+                    <p>
+                              In the 
+                              <Link
+                                        replace={false}
+                                        to="/cart"
+                              >
+                                        Cart
+                              </Link>
+                               module you can select produts from the available ones. They will be added to the cart and their promotions, if any, will be applied automatically. The cart will show all products added, their unit price, the quantity, the name of the promotion (if the product has one) and the total price per item. At the bottom it will show the total price for the cart.
+                    </p>
+                    <p>
+                              When the page is loaded for the first time, there are no 
+                              <Link
+                                        replace={false}
+                                        to="/admin/promotions"
+                              >
+                                        Promotions
+                              </Link>
+                               nor
+                               
+                              <Link
+                                        replace={false}
+                                        to="/admin/products"
+                              >
+                                        Products
+                              </Link>
+                               available. So it is not possible to use the
+                               
+                              <Link
+                                        replace={false}
+                                        to="/cart"
+                              >
+                                        Cart
+                              </Link>
+                              . You can go to the 
+                              <Link
+                                        replace={false}
+                                        to="/admin"
+                              >
+                                        Admin
+                              </Link>
+                               module and add them manually, or you can click on the "Load initial data" button at the top of this page. That button will asynchronously add a list of Promotions and Products.
+                    </p>
+                    <h2>
+                              Limitations
+                    </h2>
+                    Since this is mostly a demo app, there are many limitations.
+                    <ul>
+                              <li>
+                                        <strong>
+                                                  Numbers:
+                                        </strong>
+                                         all numeric operations are done with standard Javascript numbers, which are floating point and error prone. A library to format the results with 2 digits is being used, but it could be that, depending on the numbers, there could be small inconsistencies.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Remove/Edit Products and Promotions:
+                                        </strong>
+                                         it is not possible to edit nor remove neither Products nor Promotions. However, items from the Cart can be removed by using the decrement button until it reaches zero.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Persistency:
+                                        </strong>
+                                         there is no data persistency at all. If you close or reload the page, all data is lost. The asynchronous loading of data shows an example of using asynchronouse actions in redux.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Validations:
+                                        </strong>
+                                         there are some validations on the forms used to add Promotions and Products, but they are not full proof (you could add negative numbers, for example). And there is absolutely no validation of the data entererd in the action creators (so if the data comming from the backend as initial data is corrupted, it will just result in unexpected results). And in most of the places where data is shown, it is assumed to be valid.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Admin permission:
+                                        </strong>
+                                         the 
+                                        <Link
+                                                  replace={false}
+                                                  to="/admin"
+                                        >
+                                                  Admin
+                                        </Link>
+                                         module doesn't have any kind of permission validation whatsoever. It is just there to demo how to add Promotions and Products.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Styling:
+                                        </strong>
+                                         
+                                        <a
+                                                  href="http://getbootstrap.com/css"
+                                                  rel="noopener noreferrer"
+                                                  target="_blank"
+                                        >
+                                                  Bootstrap
+                                        </a>
+                                         
+                                        and
+                                         
+                                        <a
+                                                  href="https://react-bootstrap.github.io/components.html"
+                                                  rel="noopener noreferrer"
+                                                  target="_blank"
+                                        >
+                                                  react-bootstrap
+                                        </a>
+                                         
+                                        are the only things being used for styling the app. No custom .css file was written, so the application doesn't look perfect everywhere.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Tests:
+                                        </strong>
+                                         there are examples of different types of tests, but not everything is being tested.
+                              </li>
+                    </ul>
+          </Panel>
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div>
+          <Panel
+                    bsClass="panel"
+                    bsStyle="default"
+                    defaultExpanded={false}
+                    header="Initial Data"
+          >
+                    <p>
+                              tl/dr: You can load the initial data and start playing with the app.
+                    </p>
+                    <Grid
+                              bsClass="container"
+                              componentClass="div"
+                              fluid={true}
+                    >
+                              <Col
+                                        bsClass="col"
+                                        componentClass="div"
+                                        md={2}
+                              >
+                                        <Button
+                                                  active={false}
+                                                  block={false}
+                                                  bsClass="btn"
+                                                  bsStyle="primary"
+                                                  disabled={false}
+                                                  onClick={undefined}
+                                        >
+                                                  Load initial data
+                                        </Button>
+                              </Col>
+                              <Col
+                                        bsClass="col"
+                                        componentClass="div"
+                                        md={10}
+                              >
+                                        <LoadingState
+                                                  errorMessage=""
+                                                  isCompleted={false}
+                                                  loading={false}
+                                        />
+                              </Col>
+                    </Grid>
+          </Panel>
+          <Panel
+                    bsClass="panel"
+                    bsStyle="default"
+                    defaultExpanded={false}
+                    header="Features and limitations"
+          >
+                    <h2>
+                              Features
+                    </h2>
+                    <p>
+                              The app has 2 modules. An 
+                              <Link
+                                        replace={false}
+                                        to="/admin"
+                              >
+                                        Admin
+                              </Link>
+                               module, where you can see and manage the list of
+                               
+                              <Link
+                                        replace={false}
+                                        to="/admin/promotions"
+                              >
+                                        Promotions
+                              </Link>
+                               and the list of 
+                              <Link
+                                        replace={false}
+                                        to="/admin/products"
+                              >
+                                        Products
+                              </Link>
+                              , and a 
+                              <Link
+                                        replace={false}
+                                        to="/cart"
+                              >
+                                        Cart
+                              </Link>
+                               module, where you can add and remove the available Products from the shopping cart.
+                    </p>
+                    <p>
+                              In the 
+                              <Link
+                                        replace={false}
+                                        to="/admin/promotions"
+                              >
+                                        Promotions
+                              </Link>
+                               manager you can add promotions from two different types. The 
+                              <Link
+                                        replace={false}
+                                        to="/admin/promotions/add/percentage"
+                              >
+                                        Percentage Promotion
+                              </Link>
+                               section lets you configure a Promotion with a name and a discount percentage. The
+                               
+                              <Link
+                                        replace={false}
+                                        to="/admin/promotions/add/quantity"
+                              >
+                                        Quantity Promotion
+                              </Link>
+                               section lets you add Promotions of the kind "take 2, but pay 1", where how many you take and how many you pay is configurable.
+                    </p>
+                    <p>
+                              In the 
+                              <Link
+                                        replace={false}
+                                        to="/admin/products"
+                              >
+                                        Products
+                              </Link>
+                               manager you can add Products with an name, a unit price and, optionally, one of the available Promotions.
+                    </p>
+                    <p>
+                              In the 
+                              <Link
+                                        replace={false}
+                                        to="/cart"
+                              >
+                                        Cart
+                              </Link>
+                               module you can select produts from the available ones. They will be added to the cart and their promotions, if any, will be applied automatically. The cart will show all products added, their unit price, the quantity, the name of the promotion (if the product has one) and the total price per item. At the bottom it will show the total price for the cart.
+                    </p>
+                    <p>
+                              When the page is loaded for the first time, there are no 
+                              <Link
+                                        replace={false}
+                                        to="/admin/promotions"
+                              >
+                                        Promotions
+                              </Link>
+                               nor
+                               
+                              <Link
+                                        replace={false}
+                                        to="/admin/products"
+                              >
+                                        Products
+                              </Link>
+                               available. So it is not possible to use the
+                               
+                              <Link
+                                        replace={false}
+                                        to="/cart"
+                              >
+                                        Cart
+                              </Link>
+                              . You can go to the 
+                              <Link
+                                        replace={false}
+                                        to="/admin"
+                              >
+                                        Admin
+                              </Link>
+                               module and add them manually, or you can click on the "Load initial data" button at the top of this page. That button will asynchronously add a list of Promotions and Products.
+                    </p>
+                    <h2>
+                              Limitations
+                    </h2>
+                    Since this is mostly a demo app, there are many limitations.
+                    <ul>
+                              <li>
+                                        <strong>
+                                                  Numbers:
+                                        </strong>
+                                         all numeric operations are done with standard Javascript numbers, which are floating point and error prone. A library to format the results with 2 digits is being used, but it could be that, depending on the numbers, there could be small inconsistencies.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Remove/Edit Products and Promotions:
+                                        </strong>
+                                         it is not possible to edit nor remove neither Products nor Promotions. However, items from the Cart can be removed by using the decrement button until it reaches zero.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Persistency:
+                                        </strong>
+                                         there is no data persistency at all. If you close or reload the page, all data is lost. The asynchronous loading of data shows an example of using asynchronouse actions in redux.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Validations:
+                                        </strong>
+                                         there are some validations on the forms used to add Promotions and Products, but they are not full proof (you could add negative numbers, for example). And there is absolutely no validation of the data entererd in the action creators (so if the data comming from the backend as initial data is corrupted, it will just result in unexpected results). And in most of the places where data is shown, it is assumed to be valid.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Admin permission:
+                                        </strong>
+                                         the 
+                                        <Link
+                                                  replace={false}
+                                                  to="/admin"
+                                        >
+                                                  Admin
+                                        </Link>
+                                         module doesn't have any kind of permission validation whatsoever. It is just there to demo how to add Promotions and Products.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Styling:
+                                        </strong>
+                                         
+                                        <a
+                                                  href="http://getbootstrap.com/css"
+                                                  rel="noopener noreferrer"
+                                                  target="_blank"
+                                        >
+                                                  Bootstrap
+                                        </a>
+                                         
+                                        and
+                                         
+                                        <a
+                                                  href="https://react-bootstrap.github.io/components.html"
+                                                  rel="noopener noreferrer"
+                                                  target="_blank"
+                                        >
+                                                  react-bootstrap
+                                        </a>
+                                         
+                                        are the only things being used for styling the app. No custom .css file was written, so the application doesn't look perfect everywhere.
+                              </li>
+                              <li>
+                                        <strong>
+                                                  Tests:
+                                        </strong>
+                                         there are examples of different types of tests, but not everything is being tested.
+                              </li>
+                    </ul>
+          </Panel>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Home
+    errorMessage=""
+    isCompleted={false}
+    loading={false}
+/>,
+}
+`;
+
+exports[`LoadingState default renders correctly 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div />,
+  "nodes": Array [
+    <div />,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <LoadingState
+        errorMessage=""
+        isCompleted={false}
+        loading={false}
+/>,
+      "_debugID": 9,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": LoadingState {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "errorMessage": "",
+          "isCompleted": false,
+          "loading": false,
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 5,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div />,
+        "_debugID": 10,
+        "_renderedOutput": <div />,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <LoadingState
+    errorMessage=""
+    isCompleted={false}
+    loading={false}
+/>,
+}
+`;
+
+exports[`LoadingState loading completed renders correctly 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Alert
+    bsClass="alert"
+    bsStyle="success"
+    closeLabel="Close alert"
+>
+    Promotions and Products default data loaded successfully.
+</Alert>,
+  "nodes": Array [
+    <Alert
+      bsClass="alert"
+      bsStyle="success"
+      closeLabel="Close alert"
+>
+      Promotions and Products default data loaded successfully.
+</Alert>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <LoadingState
+        errorMessage=""
+        isCompleted={true}
+        loading={false}
+/>,
+      "_debugID": 13,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": LoadingState {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "errorMessage": "",
+          "isCompleted": true,
+          "loading": false,
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 7,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Alert
+          bsClass="alert"
+          bsStyle="success"
+          closeLabel="Close alert"
+>
+          Promotions and Products default data loaded successfully.
+</Alert>,
+        "_debugID": 14,
+        "_renderedOutput": <Alert
+          bsClass="alert"
+          bsStyle="success"
+          closeLabel="Close alert"
+>
+          Promotions and Products default data loaded successfully.
+</Alert>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <LoadingState
+    errorMessage=""
+    isCompleted={true}
+    loading={false}
+/>,
+}
+`;
+
+exports[`LoadingState loading error renders correctly 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Alert
+    bsClass="alert"
+    bsStyle="danger"
+    closeLabel="Close alert"
+>
+    <strong>
+        Error!
+    </strong>
+     
+    Some error
+    .
+</Alert>,
+  "nodes": Array [
+    <Alert
+      bsClass="alert"
+      bsStyle="danger"
+      closeLabel="Close alert"
+>
+      <strong>
+            Error!
+      </strong>
+       
+      Some error
+      .
+</Alert>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <LoadingState
+        errorMessage="Some error"
+        isCompleted={false}
+        loading={false}
+/>,
+      "_debugID": 15,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": LoadingState {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "errorMessage": "Some error",
+          "isCompleted": false,
+          "loading": false,
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 8,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Alert
+          bsClass="alert"
+          bsStyle="danger"
+          closeLabel="Close alert"
+>
+          <strong>
+                    Error!
+          </strong>
+           
+          Some error
+          .
+</Alert>,
+        "_debugID": 16,
+        "_renderedOutput": <Alert
+          bsClass="alert"
+          bsStyle="danger"
+          closeLabel="Close alert"
+>
+          <strong>
+                    Error!
+          </strong>
+           
+          Some error
+          .
+</Alert>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <LoadingState
+    errorMessage="Some error"
+    isCompleted={false}
+    loading={false}
+/>,
+}
+`;
+
+exports[`LoadingState loading with spinner renders correctly 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <i
+    className="fa fa-spinner fa-spin"
+    style={
+        Object {
+            "fontSize": "24px",
+          }
+    }
+/>,
+  "nodes": Array [
+    <i
+      className="fa fa-spinner fa-spin"
+      style={
+            Object {
+                  "fontSize": "24px",
+                }
+      }
+/>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <LoadingState
+        errorMessage=""
+        isCompleted={false}
+        loading={true}
+/>,
+      "_debugID": 11,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": LoadingState {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "errorMessage": "",
+          "isCompleted": false,
+          "loading": true,
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 6,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <i
+          className="fa fa-spinner fa-spin"
+          style={
+                    Object {
+                              "fontSize": "24px",
+                            }
+          }
+/>,
+        "_debugID": 12,
+        "_renderedOutput": <i
+          className="fa fa-spinner fa-spin"
+          style={
+                    Object {
+                              "fontSize": "24px",
+                            }
+          }
+/>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <LoadingState
+    errorMessage=""
+    isCompleted={false}
+    loading={true}
+/>,
+}
+`;
